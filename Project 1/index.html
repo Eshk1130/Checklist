@@ -5,64 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Blog</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container">
+            <h1 class="navbar-brand m-0">My Portfolio</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <img src=mypic.png alt="Eshmeet Kaur">
-        <p>Hello, This is Eshmeet Kaur.I am a first Year computer science student at Guru Tegh Bahadur Institute Of Technology, currently learning Web Development.Looking forward to meeting more aspiring web developers and learning from everybody else, i am also interested in learning Internet Of things and electronics. some of my hobbies include travelling and reading.</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-box">HTML</div>
-            <div class="skill-box">CSS</div>
-            <div class="skill-box">JavaScript</div>
-            <div class="skill-box">MySQL</div>
-            <div class="skill-box">Python</div>
+    <section id="about" class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="mypic.png" class="img-fluid border border-dark" alt="Eshmeet Kaur">
+            </div>
+            <div class="col-md-8">
+                <h2>About Me</h2>
+                <p>Hello! I'm Eshmeet Kaur, a first-year Computer Science student at Guru Tegh Bahadur Institute of Technology with a strong passion for web development and emerging technologies.
+                 Currently, I serve as the Web Development Co-Lead at IEEE GTBIT SB, where I collaborate with like-minded individuals to build innovative projects and enhance my technical expertise. 
+                 I have experience working with C, MySQL, Python, JavaScript, HTML, and CSS, and I'm continuously expanding my knowledge.
+                 Beyond web development, I'm deeply interested in IoT and electronics, exploring how connected devices can shape the future. 
+                 When I'm not coding, you’ll find me traveling, reading, and engaging with the tech community to learn and grow.</p>
+                </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-box">
-                <h3>Project 1</h3>
-                <p> A reactive commercial website made using html css and JavaScript</p>
+   
+    <section id="skills" class="container my-5">
+        <h2 class="text-center">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-2 col-4 p-2"><div class="skill-box bg-white p-3 shadow rounded">HTML</div></div>
+            <div class="col-md-2 col-4 p-2"><div class="skill-box bg-white p-3 shadow rounded">CSS</div></div>
+            <div class="col-md-2 col-4 p-2"><div class="skill-box bg-white p-3 shadow rounded">JavaScript</div></div>
+            <div class="col-md-2 col-4 p-2"><div class="skill-box bg-white p-3 shadow rounded">MySQL</div></div>
+            <div class="col-md-2 col-4 p-2"><div class="skill-box bg-white p-3 shadow rounded">Python</div></div>
+            <div class="col-md-2 col-4 p-2"><div class="skill-box bg-white p-3 shadow rounded">C</div></div>
+        </div>
+    </section>
+
+    <section id="projects" class="container my-5">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-4 p-3">
+                <div class="project-box bg-white p-3 shadow rounded text-center">
+                    <h3>Project 1</h3>
+                    <p>A reactive commercial website made using HTML, CSS, and JavaScript.</p>
+                    <a href="https://github.com/Eshk1130/webdev/tree/main/Final%20Assignment" class="btn btn-dark">View Project</a>
+                </div>
             </div>
-            <div class="project-box">
-                <h3>Project 2</h3>
-                <p>A management system made using Python and MySQL interface </p>
+            <div class="col-md-4 p-3">
+                <div class="project-box bg-white p-3 shadow rounded text-center">
+                    <h3>Project 2</h3>
+                    <p>A management system made using Python and MySQL interface.</p>
+                    <a href="https://github.com/Eshk1130/projects-/blob/main/management.py" class="btn btn-dark">View Project</a>
+                </div>
             </div>
-            <div class="project-box">
-                <h3>Project 3</h3>
-                <p>An IOT based smart irrigation system.</p>
+            <div class="col-md-4 p-3">
+                <div class="project-box bg-white p-3 shadow rounded text-center">
+                    <h3>Project 3</h3>
+                    <p>An IoT-based smart irrigation system using Arduino.</p>
+                    <a href="https://github.com/Eshk1130/projects-/blob/main/irrigation" class="btn btn-dark">View Project</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 style="color: white;">Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+   
+    <section id="contact" class="container my-5 text-center">
+        <h2>Contact</h2>
+        <div class="contact-box bg-white p-3 shadow rounded">
+            <p>Email: <a href="mailto:eshmeetkaur@gmail.com">eshmeetkaur@gmail.com</a></p>
+            <p>Phone: 9311529004</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/eshmeet-kaur-542863329/" target="_blank">Eshmeet Kaur</a></p>
+        </div>
     </section>
 
-    <footer>
-        <p><i>&copy; 2025 My Personal Blog. All rights reserved.</i></p>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 My Personal Blog. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 </body>
 </html>
